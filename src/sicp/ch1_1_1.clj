@@ -1,4 +1,6 @@
-(ns sicp)
+(ns sicp.ch1_1_1 (:require [clojure.test :refer [is]]))
+
+;;; Exercise 1
 
 ; recursive call of function p => never finishes
 (defn p [] (p))
@@ -8,4 +10,6 @@
 
 ; applicative order: evaluates (p) first => stackoverflow
 (test 0 (p))
+
+
 

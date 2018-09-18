@@ -1,11 +1,13 @@
-(ns sicp (:use clojure.test))
+(ns sicp.ch1_1_32b (:require [clojure.test :refer [is]]))
+
+;;; Exercise 1.32b
 
 (defn accumulate-iter [combiner null-value term a next b]
-  (defn iter [a result]
-    (if (> a b)
-      result
-      (iter (next a) (combiner (term a) result))))
-  (iter a null-value))
+  (letfn [(iter [a result]
+            (if (> a b)
+              result
+              (iter (next a) (combiner (term a) result))))]
+    (iter a null-value)))
 
 (defn prod [term a next b]
   (accumulate-iter * 1 term a next b))
@@ -30,9 +32,9 @@
   (* x x x))
 
 (defn integral [f a b dx]
-  (defn add-dx [x]
-    (+ x dx))
-  (* (sum f (+ a (/ dx 2.0)) add-dx b) dx))
+  (letfn [(add-dx [x]
+            (+ x dx))]
+    (* (sum f (+ a (/ dx 2.0)) add-dx b) dx)))
 
 (is (= 0.24998750000000042 (integral cube 0 1 0.01)))
 

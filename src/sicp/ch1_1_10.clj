@@ -1,4 +1,6 @@
-(ns sicp (:use clojure.test))
+(ns sicp.ch1_1_10 (:require [clojure.test :refer [is]]))
+
+;;; Exercise 1.10
 
 (defn A [x y]
   (cond (= y 0) 0
@@ -43,5 +45,3 @@
 (is (= 4 (h 2)))
 (is (= 16 (h 3)))
 (is (= 65536 (h 4)))
-
-(run-tests)

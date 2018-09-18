@@ -1,4 +1,6 @@
-(ns sicp (:use clojure.test))
+(ns sicp.ch1_1_31 (:require [clojure.test :refer [is]]))
+
+;;; Exercise 1.31
 
 (defn prod [term a next b]
   (if (> a b) 1

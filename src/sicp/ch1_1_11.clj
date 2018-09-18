@@ -1,5 +1,6 @@
-(ns sicp (:use clojure.test))
+(ns sicp.ch1_1_11 (:require [clojure.test :refer [is]]))
 
+;;; Exercise 1.11
 ; recursive case is straight forward from the function def:
 (defn f [n]
   (if (< n 3) n
@@ -48,5 +49,3 @@
 (is (= 11 (fi 4)))
 (is (= 25 (fi 5)))
 (is (= 59 (fi 6)))
-
-(run-tests)

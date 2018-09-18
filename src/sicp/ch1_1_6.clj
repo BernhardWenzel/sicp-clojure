@@ -1,4 +1,4 @@
-(ns sicp (:use clojure.test))
+(ns sicp.ch1_1_6 (:require [clojure.test :refer [is]]))
 
 (defn average [x y]
   (/ (+ x y) 2))
@@ -32,5 +32,3 @@
   (sqrt-iter 1.0 x))
 
 (is (and (> 3.001 (sqrt 9)) (< 2.999 (sqrt 9))))
-
-(run-tests)

@@ -1,4 +1,6 @@
-(ns sicp (:use clojure.test))
+(ns sicp.ch1_1_4 (:require [clojure.test :refer [is]]))
+
+;;; Exercise 1.4
 
 ; The first condition determines the operator for the function body to use
 ; addition if b is positive, substraction if negative. This way, the function
@@ -9,5 +11,3 @@
 (is (= 5 (a-plus-abs-b 2 3)))
 (is (= 5 (a-plus-abs-b 2 -3)))
 (is (= 1 (a-plus-abs-b -2 -3)))
-
-(run-tests)

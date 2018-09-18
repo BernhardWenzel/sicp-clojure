@@ -1,5 +1,6 @@
-(ns sicp (:use clojure.test))
+(ns sicp.ch1_1_9 (:require [clojure.test :refer [is]]))
 
+;;; Exercise 1.9
 
 (defn + [a b]
   (if (= a 0)
@@ -33,5 +34,3 @@
     (++ (dec a) (inc b))))
 
 (is (= 9 (++ 4 5)))
-
-(run-tests)
