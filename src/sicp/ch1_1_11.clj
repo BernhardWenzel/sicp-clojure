@@ -27,7 +27,7 @@
 ;       = 11
 ; if we write the three summands as:
 ;       = a + b + c
-; we notice that in each iteration following substitions happen:
+; we notice that in each iteration following substitutions happen:
 ; a = f(a)
 ; b = a
 ; c = b
